@@ -31,7 +31,7 @@ export default function Book() {
   };
 
 
-  if (!book) return <div>Loading...</div>;
+  if (!book) return <div><h1> Book Does not exist </h1></div>;
 
   return (
     <div className='px-32 py-12 flex justify-between flex-col items-center min-w-screen gap-10'>

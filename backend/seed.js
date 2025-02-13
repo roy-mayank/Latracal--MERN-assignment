@@ -1,6 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-const { Book, Review, User } = require("./index");
+const { Book, Review } = require("./index");
 
 mongoose
   .connect(process.env.MONGO_URI, {
@@ -17,7 +17,6 @@ mongoose
   try {
     await Book.deleteMany();
     await Review.deleteMany();
-    await User.deleteMany();
 
     const books = await Book.insertMany([
       {
@@ -59,20 +58,6 @@ mongoose
         user: "AliceBrown",
         comment: "An absolute classic.",
         rating: 5,
-      },
-    ]);
-
-    await User.insertMany([
-      { username: "john_doe", password: "hashed_password_1", name: "John Doe" },
-      {
-        username: "jane_smith",
-        password: "hashed_password_2",
-        name: "Jane Smith",
-      },
-      {
-        username: "alice_brown",
-        password: "hashed_password_3",
-        name: "Alice Brown",
       },
     ]);
 

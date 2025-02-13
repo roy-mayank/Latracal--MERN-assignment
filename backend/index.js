@@ -18,17 +18,10 @@ const reviewSchema = new mongoose.Schema({
   rating: Number,
 });
 
-const userSchema = new mongoose.Schema({
-  username: String,
-  password: String,
-  name: String,
-});
-
 const Book = mongoose.model("Book", bookSchema);
 const Review = mongoose.model("Review", reviewSchema);
-const User = mongoose.model("User", userSchema);
 
-module.exports = { Book, Review, User };
+module.exports = { Book, Review };
 
 const app = express();
 app.use(express.json());
@@ -100,15 +93,6 @@ app
       res.status(500).json({ error: err.message });
     }
   });
-
-app.route("/user").get((req, res) => {
-  User.find((err, users) => {
-    if (err) {
-      res.status(500).send(err);
-    }
-    res.json(users);
-  });
-});
 
 app.get("/", (req, res) => res.send("API Running"));
 

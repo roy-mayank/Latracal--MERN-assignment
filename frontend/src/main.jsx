@@ -5,7 +5,6 @@ import './index.css'
 import Home from './Home.jsx'
 import BooksPage from './pages/bookspage.jsx'
 import Book from './pages/book.jsx'
-import Profile from './pages/profile.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -15,7 +14,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<Home />} />
         <Route path="/books" element={<BooksPage />} />
         <Route path="/:bookId" element={<Book />} />
-        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>,
