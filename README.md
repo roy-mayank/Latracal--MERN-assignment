@@ -1,6 +1,7 @@
 ## Repo Description
 
-This repository hosts code for a MERN stack Book Review Management system. It was part of an assignment from 'Latracal'. 
+This repository hosts code for a MERN stack Book Review Management system. It was part of an assignment from 'Latracal Solutions'. Unfortunately, I had to abandon some functionalities due to the deadline like the user model in database, profile management page, auth and featured books home page
+
 FrontEnd Stacks: React, vite, TailwindCSS, Ant Design, React-router
 BackEnd Stacks: MongoDB, node.js
 API: express.js
